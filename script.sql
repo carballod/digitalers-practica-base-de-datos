@@ -6,10 +6,7 @@ create table if not exists empleados(
 
 	id_empleado int auto_increment,
 	id_jefe int(20) not null,
-	RazonSocial varchar(50) not null,
-	fecha_nacimiento timestamp not null,
 	sucursal varchar(50) not null,
-	ciudad varchar(50) not null default 'Buenos Aires',
 	telefono varchar(20) not null,
 	cargo varchar(20) not null,
 	fecha_incorporacion timestamp default current_timestamp(),
@@ -22,10 +19,8 @@ create table if not exists empleados(
 
 create table if not exists clientes(
 	id_cliente int auto_increment,
-	RazonSocial varchar(50) not null,
 	calle varchar(50) not null,
 	ciudad varchar(50) not null default 'Buenos Aires',
-	fecha_nacimiento timestamp not null,
 	fecha_incorporacion timestamp default current_timestamp(),
 	id_empleado int,
 	
